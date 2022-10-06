@@ -23,7 +23,8 @@ app.get("/report", processEndpoint);
 app.get("/createquery/:orgid", processEndpoint, (req, res) => {
 	console.log(res.locals);
 	//console.log(req, " req");
-	res.render("home", { data: res.locals.queryData });
+	res.json(res.locals.queryData);
+	//res.render("home", { data: res.locals.queryData });
 });
 
 app.get("/", function (req, res) {
