@@ -46,12 +46,6 @@ const createQuery = async (req, res, next) => {
 			//Run Project
 			runProject().then((runResponse) => {
 				processRequest(10, queryToken, res, next);
-				// getQueryRuns(queryToken).then((queryRuns) => {
-				// 	console.log("queryRuns: ", queryRuns.data._embedded);
-				// 	if (queryRuns.data._embedded.query_runs[0].state === "enqueued") {
-				// 		processRequest(10, queryToken, res, next);
-				// 	}
-				// });
 			});
 		})
 		.catch(function (error) {
