@@ -1,4 +1,3 @@
-//require("dotenv").config();
 var axios = require("axios");
 const token = process.env.MODE_API_TOKEN;
 const password = process.env.MODE_API_PASSWORD;
@@ -38,7 +37,6 @@ const createQuery = async (req, res, next) => {
 		.then(function (response) {
 			const queryToken = response.data.token;
 			console.log("query Token", queryToken);
-			//Run Project
 			runProject().then((runResponse) => {
 				processRequest(10, queryToken, res, next);
 			});

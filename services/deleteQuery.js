@@ -1,4 +1,3 @@
-//require("dotenv").config();
 var axios = require("axios");
 const token = process.env.MODE_API_TOKEN;
 const password = process.env.MODE_API_PASSWORD;

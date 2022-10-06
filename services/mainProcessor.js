@@ -1,6 +1,3 @@
-require("dotenv").config();
-var axios = require("axios");
-
 const { createQuery } = require("./createQuery");
 
 const mainProcessor = async (req, res, next) => {
